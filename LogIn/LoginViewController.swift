@@ -37,7 +37,12 @@ class Singleton {
         else {return}
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error == nil{
-                self.performSegue(withIdentifier: "LogIn", sender: self)
+                let storyboard = UIStoryboard(name: "TabBarStoryboard", bundle: nil)
+                let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBarHomeViewController")
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+                
+                
+                //self.performSegue(withIdentifier: "LogIn", sender: self)
             }
             else{
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)

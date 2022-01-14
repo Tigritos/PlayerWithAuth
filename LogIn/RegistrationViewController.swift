@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import CoreMIDI
 
 class RegistrationViewController: UIViewController {
     
@@ -42,9 +43,21 @@ class RegistrationViewController: UIViewController {
             else {return}
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                 if error == nil {
-                    self.performSegue(withIdentifier: "SignUp", sender: self)
+                    let storyboard = UIStoryboard(name: "TabBarStoryboard", bundle: nil)
+                    let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBarHomeViewController")
+                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+                    let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                    changeRequest?.displayName = name
+                    changeRequest?.commitChanges { error in
+                        if error == nil {
+                            print("name updated")
+                        } else {
+                            print("Error")
+                        }
+                        
+                    }
                     
-                   
+                    //self.performSegue(withIdentifier: "SignUp", sender: self)
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
