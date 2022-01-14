@@ -75,9 +75,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let position = indexPath.row
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "PlayerViewController") as? PlayerViewController else {return}
-        vc.configure(songs: songs, position: position)
-        present(vc, animated: true)
+        guard let playerVC = UIStoryboard(name: "PlayerStoryboard", bundle: nil).instantiateViewController(withIdentifier: "PlayerViewController") as? PlayerViewController else {return}
+        playerVC.configure(songs: songs, position: position)
+        self.present(playerVC, animated: true)
     }
     
 }
