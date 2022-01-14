@@ -252,13 +252,13 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zdO-N7-Lt9">
                                         <rect key="frame" x="52" y="0.0" width="250" height="250"/>
-                                        <color key="backgroundColor" red="0.76274565080000001" green="0.074444148220000006" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="Jr1-73-tQA"/>
                                             <constraint firstAttribute="width" secondItem="zdO-N7-Lt9" secondAttribute="height" id="e1F-0X-tnc"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Label]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzl-J1-g3v">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Label]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzl-J1-g3v">
                                         <rect key="frame" x="150.5" y="275" width="53.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -272,31 +272,59 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgr-or-GwH">
-                                <rect key="frame" x="187" y="812" width="40" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="It0-Up-AKm">
+                                <rect key="frame" x="20" y="745.5" width="374" height="106.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfk-QN-vED">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="106.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="backward.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="backwardButtonAction:" destination="ZoK-9C-6vk" eventType="touchUpInside" id="wZA-oz-cPk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgr-or-GwH">
+                                        <rect key="frame" x="133.5" y="0.0" width="107" height="106.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Bgr-or-GwH" secondAttribute="height" id="iTf-NV-2P0"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playButton:" destination="ZoK-9C-6vk" eventType="touchUpInside" id="Fmk-sT-M3m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2A-Xx-aGw">
+                                        <rect key="frame" x="267.5" y="0.0" width="106.5" height="106.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="forward.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="forwardButtonAction:" destination="ZoK-9C-6vk" eventType="touchUpInside" id="Q4x-mA-Shh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="VjG-ce-dpm"/>
-                                    <constraint firstAttribute="width" secondItem="Bgr-or-GwH" secondAttribute="height" id="iTf-NV-2P0"/>
+                                    <constraint firstItem="Cfk-QN-vED" firstAttribute="width" secondItem="Cfk-QN-vED" secondAttribute="height" id="DHm-lL-r4z"/>
+                                    <constraint firstItem="k2A-Xx-aGw" firstAttribute="width" secondItem="k2A-Xx-aGw" secondAttribute="height" id="SZT-7B-maW"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
-                                <connections>
-                                    <action selector="playButton:" destination="ZoK-9C-6vk" eventType="touchUpInside" id="Fmk-sT-M3m"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="reL-de-E5o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="reL-de-E5o" firstAttribute="bottom" secondItem="It0-Up-AKm" secondAttribute="bottom" constant="10" id="8gx-j4-DMV"/>
                             <constraint firstItem="bkh-fX-vbQ" firstAttribute="centerX" secondItem="reL-de-E5o" secondAttribute="centerX" id="JLj-R4-5WN"/>
-                            <constraint firstItem="Bgr-or-GwH" firstAttribute="centerX" secondItem="reL-de-E5o" secondAttribute="centerX" id="gPz-vf-hah"/>
-                            <constraint firstItem="Bgr-or-GwH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bkh-fX-vbQ" secondAttribute="bottom" constant="20" id="kN2-AN-8xb"/>
+                            <constraint firstItem="reL-de-E5o" firstAttribute="trailing" secondItem="It0-Up-AKm" secondAttribute="trailing" constant="20" id="Roa-U7-cUy"/>
                             <constraint firstItem="bkh-fX-vbQ" firstAttribute="top" secondItem="reL-de-E5o" secondAttribute="top" constant="50" id="mh2-CT-mts"/>
-                            <constraint firstItem="reL-de-E5o" firstAttribute="bottom" secondItem="Bgr-or-GwH" secondAttribute="bottom" constant="10" id="pq0-zP-dvZ"/>
+                            <constraint firstItem="It0-Up-AKm" firstAttribute="leading" secondItem="reL-de-E5o" secondAttribute="leading" constant="20" id="rbF-4H-RGb"/>
                             <constraint firstItem="bkh-fX-vbQ" firstAttribute="leading" secondItem="reL-de-E5o" secondAttribute="leading" constant="30" id="v8o-gy-ZDm"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backwardButton" destination="Cfk-QN-vED" id="buf-kl-YHY"/>
+                        <outlet property="forwardButton" destination="k2A-Xx-aGw" id="teX-KI-ELo"/>
                         <outlet property="imageView" destination="zdO-N7-Lt9" id="t9B-5P-zPb"/>
                         <outlet property="playPauseButton" destination="Bgr-or-GwH" id="Udz-Un-BzT"/>
                         <outlet property="soundArtistLabel" destination="0Wo-xa-J9H" id="IEs-Zf-n0k"/>
@@ -305,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rO-7a-PXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3793" y="-62"/>
+            <point key="canvasLocation" x="3793" y="-76"/>
         </scene>
         <!--Title-->
         <scene sceneID="yn9-Dp-gcZ">
@@ -488,12 +516,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9ed-tM-68v"/>
+        <segue reference="Esg-A7-0cl"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="backward.fill" catalog="system" width="128" height="79"/>
+        <image name="forward.fill" catalog="system" width="128" height="79"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
