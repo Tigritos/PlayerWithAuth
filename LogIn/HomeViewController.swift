@@ -49,7 +49,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 if let songNameString = titleItems.first?.value?.description,
                    let artistNameString = artistItems.first?.value?.description {
-                    print(songNameString)
+                    
                     songsTitles.append(songNameString)
                     songs.append(Song(name: songNameString,
                                       artistName: artistNameString,
