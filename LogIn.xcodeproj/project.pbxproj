@@ -28,6 +28,9 @@
 		379589212779E97C00A571A4 /* saint-asonia-king-of-nothing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3795891E2779E97B00A571A4 /* saint-asonia-king-of-nothing.mp3 */; };
 		37958923277B28D800A571A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37958922277B28D800A571A4 /* ProfileViewController.swift */; };
 		37958925277DD0F600A571A4 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37958924277DD0F600A571A4 /* PlayerViewController.swift */; };
+		379589292790439100A571A4 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379589282790439100A571A4 /* PlayerViewModel.swift */; };
+		3795892B2790782A00A571A4 /* SuicideboyS - And To Those I Love, Thanks For Sticking Around.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3795892A2790782A00A571A4 /* SuicideboyS - And To Those I Love, Thanks For Sticking Around.mp3 */; };
+		3795892D2791879000A571A4 /* PlayerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3795892C2791879000A571A4 /* PlayerStoryboard.storyboard */; };
 		66508AFDC16F2DE364D44D07 /* Pods_LogIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45ACE576CD533BAB54170BB /* Pods_LogIn.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +77,9 @@
 		3795891E2779E97B00A571A4 /* saint-asonia-king-of-nothing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "saint-asonia-king-of-nothing.mp3"; sourceTree = "<group>"; };
 		37958922277B28D800A571A4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		37958924277DD0F600A571A4 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		379589282790439100A571A4 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		3795892A2790782A00A571A4 /* SuicideboyS - And To Those I Love, Thanks For Sticking Around.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "SuicideboyS - And To Those I Love, Thanks For Sticking Around.mp3"; path = "../../../../../Downloads/SuicideboyS - And To Those I Love, Thanks For Sticking Around.mp3"; sourceTree = "<group>"; };
+		3795892C2791879000A571A4 /* PlayerStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerStoryboard.storyboard; sourceTree = "<group>"; };
 		41A58F72E5EECD77E240AFD4 /* Pods_LogIn_LogInUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogIn_LogInUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73588EE6E052E19C68F33261 /* Pods-LogInTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogInTests.release.xcconfig"; path = "Target Support Files/Pods-LogInTests/Pods-LogInTests.release.xcconfig"; sourceTree = "<group>"; };
 		73C91BDBE633CED98D215BA1 /* Pods-LogIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogIn.debug.xcconfig"; path = "Target Support Files/Pods-LogIn/Pods-LogIn.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,11 +142,13 @@
 		379588E02778953700A571A4 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				379589272790434E00A571A4 /* Player */,
 				3795891B2779E92100A571A4 /* Audio */,
 				379588E12778953700A571A4 /* AppDelegate.swift */,
 				379588E32778953700A571A4 /* SceneDelegate.swift */,
 				379588E52778953700A571A4 /* StartViewController.swift */,
 				379588E72778953700A571A4 /* Main.storyboard */,
+				3795892C2791879000A571A4 /* PlayerStoryboard.storyboard */,
 				379588EA2778953900A571A4 /* Assets.xcassets */,
 				379588EC2778953900A571A4 /* LaunchScreen.storyboard */,
 				379588EF2778953900A571A4 /* Info.plist */,
@@ -150,7 +158,6 @@
 				37958915277898EB00A571A4 /* HomeViewController.swift */,
 				379589192779DA4400A571A4 /* TabBarHomeViewController.swift */,
 				37958922277B28D800A571A4 /* ProfileViewController.swift */,
-				37958924277DD0F600A571A4 /* PlayerViewController.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -177,9 +184,19 @@
 			children = (
 				3795891D2779E97B00A571A4 /* saint-asonia-dying-slowly.mp3 */,
 				3795891C2779E97B00A571A4 /* saint-asonia-fairy-tale.mp3 */,
+				3795892A2790782A00A571A4 /* SuicideboyS - And To Those I Love, Thanks For Sticking Around.mp3 */,
 				3795891E2779E97B00A571A4 /* saint-asonia-king-of-nothing.mp3 */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		379589272790434E00A571A4 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				37958924277DD0F600A571A4 /* PlayerViewController.swift */,
+				379589282790439100A571A4 /* PlayerViewModel.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		49BECBAA66E17A7EB2ADBBE8 /* Pods */ = {
@@ -314,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3795892B2790782A00A571A4 /* SuicideboyS - And To Those I Love, Thanks For Sticking Around.mp3 in Resources */,
 				3795891F2779E97C00A571A4 /* saint-asonia-fairy-tale.mp3 in Resources */,
 				379589202779E97C00A571A4 /* saint-asonia-dying-slowly.mp3 in Resources */,
 				379588EE2778953900A571A4 /* LaunchScreen.storyboard in Resources */,
@@ -321,6 +339,7 @@
 				379588EB2778953900A571A4 /* Assets.xcassets in Resources */,
 				379589212779E97C00A571A4 /* saint-asonia-king-of-nothing.mp3 in Resources */,
 				379588E92778953700A571A4 /* Main.storyboard in Resources */,
+				3795892D2791879000A571A4 /* PlayerStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				379588E62778953700A571A4 /* StartViewController.swift in Sources */,
+				379589292790439100A571A4 /* PlayerViewModel.swift in Sources */,
 				379588E22778953700A571A4 /* AppDelegate.swift in Sources */,
 				37958912277898BB00A571A4 /* RegistrationViewController.swift in Sources */,
 				37958914277898D600A571A4 /* LoginViewController.swift in Sources */,
