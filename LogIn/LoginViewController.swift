@@ -41,8 +41,6 @@ class Singleton {
                 let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBarHomeViewController")
                 (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
                 
-                
-                //self.performSegue(withIdentifier: "LogIn", sender: self)
             }
             else{
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
