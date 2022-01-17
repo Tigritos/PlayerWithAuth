@@ -18,8 +18,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //emailLabel.text = userDefaults.string(forKey: "email")
-        //nameLabel.text = userDefaults.string(forKey: "name")
         emailLabel.text = Auth.auth().currentUser?.email
         nameLabel.text = Auth.auth().currentUser?.displayName
         exitButton.tintColor = .red
@@ -33,17 +31,12 @@ class ProfileViewController: UIViewController {
             print ("Error sign out: \(signOutError)")
         }
         
-//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "StartViewController")
-//        else {return}
-//        navigationController?.pushViewController(vc, animated: true)
-        
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainNavVC = mainStoryboard.instantiateViewController(identifier: "MainNavigationController")
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainNavVC)
         
         userDefaults.removeObject(forKey: "email")
         userDefaults.removeObject(forKey: "password")
-        userDefaults.removeObject(forKey: "name")
     }
     
 }

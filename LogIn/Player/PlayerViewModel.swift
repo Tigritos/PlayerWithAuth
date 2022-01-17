@@ -34,7 +34,7 @@ final class PlayerViewModel {
     }
     
     func viewDidLoad() {
-        let song = currentSong()
+        guard let song = currentSong() else { return }
         delegate?.startPlaying(song)
     }
 
@@ -48,7 +48,7 @@ final class PlayerViewModel {
         } else {
             position = songs.count - 1
         }
-        let song = currentSong()
+        guard let song = currentSong() else { return }
         delegate?.startPlaying(song)
     }
     
@@ -58,13 +58,13 @@ final class PlayerViewModel {
         } else {
             position = 0
         }
-        let song = currentSong()
+        guard let song = currentSong() else { return }
         delegate?.startPlaying(song)
         
     }
     
-    private func currentSong() -> Song {
-        let song = songs[position]
+    private func currentSong() -> Song? {
+        guard let song = songs[safe: position] else {return nil}
         return song
     }
     

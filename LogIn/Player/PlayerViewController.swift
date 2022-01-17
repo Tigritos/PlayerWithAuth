@@ -77,7 +77,7 @@ extension PlayerViewController: PlayerViewModelDelegate {
             try AVAudioSession.sharedInstance().setActive(true)
             
             player = try AVAudioPlayer(
-                contentsOf: song.Url,
+                contentsOf: song.url,
                 fileTypeHint: AVFileType.mp3.rawValue
             )
             
