@@ -18,7 +18,6 @@ final class PlayerViewModel {
     
     weak var delegate: PlayerViewModelDelegate?
     
-    
     private var songs: [Song] = []
     private var position: Int = 0
     

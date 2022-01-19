@@ -37,6 +37,9 @@
 		379589352791B82200A571A4 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379589342791B82200A571A4 /* LoginStoryboard.storyboard */; };
 		379589372791B83D00A571A4 /* RegistrationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379589362791B83D00A571A4 /* RegistrationStoryboard.storyboard */; };
 		3795893A279583F900A571A4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37958939279583F800A571A4 /* HomeViewModel.swift */; };
+		3795893D2796F7D800A571A4 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795893C2796F7D800A571A4 /* RegistrationViewModel.swift */; };
+		379589402798270800A571A4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795893F2798270800A571A4 /* LoginViewModel.swift */; };
+		379589442798335100A571A4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379589432798335100A571A4 /* ProfileViewModel.swift */; };
 		66508AFDC16F2DE364D44D07 /* Pods_LogIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45ACE576CD533BAB54170BB /* Pods_LogIn.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +95,9 @@
 		379589342791B82200A571A4 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		379589362791B83D00A571A4 /* RegistrationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationStoryboard.storyboard; sourceTree = "<group>"; };
 		37958939279583F800A571A4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3795893C2796F7D800A571A4 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		3795893F2798270800A571A4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		379589432798335100A571A4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		41A58F72E5EECD77E240AFD4 /* Pods_LogIn_LogInUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogIn_LogInUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73588EE6E052E19C68F33261 /* Pods-LogInTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogInTests.release.xcconfig"; path = "Target Support Files/Pods-LogInTests/Pods-LogInTests.release.xcconfig"; sourceTree = "<group>"; };
 		73C91BDBE633CED98D215BA1 /* Pods-LogIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogIn.debug.xcconfig"; path = "Target Support Files/Pods-LogIn/Pods-LogIn.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,25 +160,20 @@
 		379588E02778953700A571A4 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				3795891B2779E92100A571A4 /* Audio */,
+				37958945279835C600A571A4 /* Start */,
+				3795893E279826E700A571A4 /* Login */,
+				3795893B2796F7AC00A571A4 /* Registartion */,
+				379589462798364300A571A4 /* TabBar */,
 				37958938279582FE00A571A4 /* Home */,
 				379589272790434E00A571A4 /* Player */,
-				3795891B2779E92100A571A4 /* Audio */,
-				379588E12778953700A571A4 /* AppDelegate.swift */,
+				379589422798331A00A571A4 /* Profile */,
 				379588E32778953700A571A4 /* SceneDelegate.swift */,
-				379588E72778953700A571A4 /* Main.storyboard */,
-				379589342791B82200A571A4 /* LoginStoryboard.storyboard */,
-				379589362791B83D00A571A4 /* RegistrationStoryboard.storyboard */,
-				379589302791AC1C00A571A4 /* TabBarStoryboard.storyboard */,
-				379589322791B0DC00A571A4 /* ProfileStoryboard.storyboard */,
+				379588E12778953700A571A4 /* AppDelegate.swift */,
 				379588EA2778953900A571A4 /* Assets.xcassets */,
 				379588EC2778953900A571A4 /* LaunchScreen.storyboard */,
 				379588EF2778953900A571A4 /* Info.plist */,
-				379588E52778953700A571A4 /* StartViewController.swift */,
-				37958911277898BB00A571A4 /* RegistrationViewController.swift */,
-				37958913277898D600A571A4 /* LoginViewController.swift */,
 				379589172778B33A00A571A4 /* GoogleService-Info.plist */,
-				379589192779DA4400A571A4 /* TabBarHomeViewController.swift */,
-				37958922277B28D800A571A4 /* ProfileViewController.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -223,6 +224,54 @@
 				37958939279583F800A571A4 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3795893B2796F7AC00A571A4 /* Registartion */ = {
+			isa = PBXGroup;
+			children = (
+				379589362791B83D00A571A4 /* RegistrationStoryboard.storyboard */,
+				37958911277898BB00A571A4 /* RegistrationViewController.swift */,
+				3795893C2796F7D800A571A4 /* RegistrationViewModel.swift */,
+			);
+			path = Registartion;
+			sourceTree = "<group>";
+		};
+		3795893E279826E700A571A4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				379589342791B82200A571A4 /* LoginStoryboard.storyboard */,
+				37958913277898D600A571A4 /* LoginViewController.swift */,
+				3795893F2798270800A571A4 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		379589422798331A00A571A4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				379589322791B0DC00A571A4 /* ProfileStoryboard.storyboard */,
+				37958922277B28D800A571A4 /* ProfileViewController.swift */,
+				379589432798335100A571A4 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		37958945279835C600A571A4 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				379588E72778953700A571A4 /* Main.storyboard */,
+				379588E52778953700A571A4 /* StartViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		379589462798364300A571A4 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				379589302791AC1C00A571A4 /* TabBarStoryboard.storyboard */,
+				379589192779DA4400A571A4 /* TabBarHomeViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		49BECBAA66E17A7EB2ADBBE8 /* Pods */ = {
@@ -499,12 +548,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				379588E62778953700A571A4 /* StartViewController.swift in Sources */,
+				3795893D2796F7D800A571A4 /* RegistrationViewModel.swift in Sources */,
 				3795893A279583F900A571A4 /* HomeViewModel.swift in Sources */,
 				379589292790439100A571A4 /* PlayerViewModel.swift in Sources */,
 				379588E22778953700A571A4 /* AppDelegate.swift in Sources */,
 				37958912277898BB00A571A4 /* RegistrationViewController.swift in Sources */,
+				379589442798335100A571A4 /* ProfileViewModel.swift in Sources */,
 				37958914277898D600A571A4 /* LoginViewController.swift in Sources */,
 				379588E42778953700A571A4 /* SceneDelegate.swift in Sources */,
+				379589402798270800A571A4 /* LoginViewModel.swift in Sources */,
 				37958925277DD0F600A571A4 /* PlayerViewController.swift in Sources */,
 				3795891A2779DA4400A571A4 /* TabBarHomeViewController.swift in Sources */,
 				37958923277B28D800A571A4 /* ProfileViewController.swift in Sources */,

@@ -76,13 +76,12 @@
                             <constraint firstItem="MPe-bA-9Cg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6sW-OQ-xDp" secondAttribute="trailing" symbolic="YES" id="57s-gU-poa"/>
                             <constraint firstItem="tPJ-NN-RnX" firstAttribute="top" secondItem="MPe-bA-9Cg" secondAttribute="top" constant="70" id="F8C-ux-tZB"/>
                             <constraint firstItem="MPe-bA-9Cg" firstAttribute="trailing" secondItem="JBb-Od-9ij" secondAttribute="trailing" constant="20" id="GB8-2V-BQU"/>
-                            <constraint firstItem="MPe-bA-9Cg" firstAttribute="trailing" secondItem="tPJ-NN-RnX" secondAttribute="trailing" constant="337" id="GIw-4u-FMV"/>
                             <constraint firstItem="6sW-OQ-xDp" firstAttribute="top" secondItem="MPe-bA-9Cg" secondAttribute="top" constant="5" id="InG-Rl-Aaw"/>
                             <constraint firstItem="7fY-vt-YbK" firstAttribute="top" secondItem="JBb-Od-9ij" secondAttribute="bottom" constant="40" id="M6v-DD-HFT"/>
                             <constraint firstItem="7fY-vt-YbK" firstAttribute="centerX" secondItem="MPe-bA-9Cg" secondAttribute="centerX" id="QoN-2e-e35"/>
                             <constraint firstItem="Xyc-Mh-Gcs" firstAttribute="leading" secondItem="MPe-bA-9Cg" secondAttribute="leading" constant="36" id="RRF-W0-WFO"/>
-                            <constraint firstItem="MPe-bA-9Cg" firstAttribute="trailing" secondItem="OMw-bL-oBN" secondAttribute="trailing" constant="304" id="TFw-M7-eDQ"/>
-                            <constraint firstItem="OMw-bL-oBN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MPe-bA-9Cg" secondAttribute="leading" id="Tj9-cR-GBa"/>
+                            <constraint firstItem="MPe-bA-9Cg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OMw-bL-oBN" secondAttribute="trailing" constant="20" id="TFw-M7-eDQ"/>
+                            <constraint firstItem="OMw-bL-oBN" firstAttribute="leading" secondItem="MPe-bA-9Cg" secondAttribute="leading" constant="36" id="Tj9-cR-GBa"/>
                             <constraint firstItem="LSw-kg-7Nt" firstAttribute="leading" secondItem="MPe-bA-9Cg" secondAttribute="leading" constant="36" id="UIE-PS-Keo"/>
                             <constraint firstItem="JBb-Od-9ij" firstAttribute="leading" secondItem="MPe-bA-9Cg" secondAttribute="leading" constant="36" id="Y0B-xP-mJG"/>
                             <constraint firstItem="LSw-kg-7Nt" firstAttribute="top" secondItem="tPJ-NN-RnX" secondAttribute="bottom" constant="8" symbolic="YES" id="ZZz-ya-4oD"/>
@@ -93,11 +92,12 @@
                             <constraint firstItem="H4v-B8-XEl" firstAttribute="top" secondItem="6sW-OQ-xDp" secondAttribute="bottom" constant="8" symbolic="YES" id="d35-RY-DP5"/>
                             <constraint firstItem="MPe-bA-9Cg" firstAttribute="trailing" secondItem="LSw-kg-7Nt" secondAttribute="trailing" constant="20" id="fWc-vm-hIh"/>
                             <constraint firstItem="H4v-B8-XEl" firstAttribute="leading" secondItem="MPe-bA-9Cg" secondAttribute="leading" constant="36" id="goI-r5-mwB"/>
-                            <constraint firstItem="tPJ-NN-RnX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MPe-bA-9Cg" secondAttribute="leading" id="gxc-Bg-L35"/>
+                            <constraint firstItem="tPJ-NN-RnX" firstAttribute="leading" secondItem="MPe-bA-9Cg" secondAttribute="leading" constant="36" id="gxc-Bg-L35"/>
                             <constraint firstItem="MPe-bA-9Cg" firstAttribute="trailing" secondItem="Xyc-Mh-Gcs" secondAttribute="trailing" constant="20" id="qbJ-sS-UQU"/>
                             <constraint firstItem="OMw-bL-oBN" firstAttribute="top" secondItem="LSw-kg-7Nt" secondAttribute="bottom" constant="8" symbolic="YES" id="sA5-Fc-fqG"/>
                             <constraint firstItem="MPe-bA-9Cg" firstAttribute="trailing" secondItem="H4v-B8-XEl" secondAttribute="trailing" constant="20" id="v8z-yI-afb"/>
                             <constraint firstItem="6sW-OQ-xDp" firstAttribute="leading" secondItem="MPe-bA-9Cg" secondAttribute="leading" constant="36" id="xMo-OB-YMd"/>
+                            <constraint firstItem="MPe-bA-9Cg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tPJ-NN-RnX" secondAttribute="trailing" constant="20" id="zPA-nc-wbL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dkk-HT-Fqp"/>
